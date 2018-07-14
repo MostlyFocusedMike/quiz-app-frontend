@@ -297,7 +297,9 @@ main {
 
 @media screen and (max-width: 800px) {
   #sick-yeah {
-    display: none; }
+    font-size: 1.5rem;
+    top: 5rem;
+    left: 3.5rem; }
 
   #slider {
     display: none; }
