@@ -2,6 +2,6 @@
   "root": "build/",
   "routes": {
     "/**": "index.html",
-    "/**/**": "index.html"
+    "/topics/**": "index.html"
   }
 }
