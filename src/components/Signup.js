@@ -56,7 +56,7 @@ class Signup extends React.Component {
             />
           </div>
           <button type="submit" className="ui basic green button">
-            Signup
+            Sign up
           </button>
         </form>
       )

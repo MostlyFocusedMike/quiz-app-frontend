@@ -29,7 +29,7 @@ class App extends Component {
       .then(r => r.json())
       .then(res => this.setState({
         topics: res
-      }, () => console.log(this.state))
+      })
     );
 
     const token = localStorage.getItem('token')
@@ -62,10 +62,8 @@ class App extends Component {
       .then(topic => {
         let topics = [...this.state.topics]
         const oldTopic = topics.find(oldTopic => oldTopic.id === topic.id)
-        console.log(oldTopic)
-        console.log(topic)
         topics[topics.indexOf(oldTopic)] = topic
-        this.setState({topics}, () => console.log(this.state.topics))
+        this.setState({topics})
       })
   }
 
@@ -81,7 +79,6 @@ class App extends Component {
   }
 
    handleLogout = () => {
-     console.log('hello');
      this.setState({
        auth: {
          currentUser: {}
@@ -92,7 +89,7 @@ class App extends Component {
 
   render() {
     const loggedIn = !!this.state.auth.currentUser.id
-    console.log("App", (loggedIn === true));
+    console.log(window.location.href);
     return (
       <Router>
         <div>
